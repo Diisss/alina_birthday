@@ -14,12 +14,19 @@ window.addEventListener("load", () => {
       cancelButton: "sweet-cancel",
     },
   }).then((result) => {
-    if (result.isConfirmed) {
-      document.querySelector(".song").play();
-      animationTimeline();
-    } else {
-      animationTimeline();
+   const audio = document.querySelector(".song");
+
+
+    if (audio) {
+      audio.pause();
+      audio.currentTime = 0; 
     }
+
+    if (result.isConfirmed) {
+
+      audio?.play();
+    }
+    animationTimeline(); 
   });
 });
 
@@ -311,3 +318,4 @@ const animationTimeline = () => {
     tl.restart();
   });
 };
+
