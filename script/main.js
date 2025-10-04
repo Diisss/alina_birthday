@@ -1,4 +1,3 @@
-// trigger to play music in the background with sweetalert
 window.addEventListener("load", () => {
   Swal.fire({
     title: "перед тем как открыть сайт нужно подготовиться и включить звук",
@@ -16,12 +15,9 @@ window.addEventListener("load", () => {
   }).then((result) => {
    const audio = document.querySelector(".song");
 
-
-    if (audio) {
-      audio.pause();
-      audio.currentTime = 0; 
-    }
-
+    audio.pause();
+    audio.currentTime = 0; 
+   
     if (result.isConfirmed) {
 
       audio?.play();
@@ -29,6 +25,7 @@ window.addEventListener("load", () => {
     animationTimeline(); 
   });
 });
+
 
 // animation timeline
 const animationTimeline = () => {
@@ -318,4 +315,5 @@ const animationTimeline = () => {
     tl.restart();
   });
 };
+
 
