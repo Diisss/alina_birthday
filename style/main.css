@@ -107,7 +107,7 @@ body {
   }
   .three {
     background: url("../img/podark.png") no-repeat center center;
-    background-size: cover; /* красиво растягивает */
+    background-size: contain; /* красиво растягивает */
     width: 100%;
     min-height: 100vh; /* чтобы занимало весь экран */
     display: flex;
@@ -584,5 +584,6 @@ body {
     text-shadow: 2px 2px 4px rgba(0,0,0,0.7); /* мягкая темная тень */
   }
 }
+
 
 
